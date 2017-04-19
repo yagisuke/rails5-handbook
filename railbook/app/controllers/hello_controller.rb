@@ -9,4 +9,8 @@ class HelloController < ApplicationController
     @tax = 1.08
     render 'hello/view'
   end
+
+  def list
+    @books = Book.all
+  end
 end
