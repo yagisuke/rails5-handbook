@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get 'hello/view/', to: 'hello#view'
   get 'hello/nothing/', to: 'hello#nothing'
   get 'hello/list/', to: 'hello#list'
+  get 'hello/app_var/', to: 'hello#app_var'
 end

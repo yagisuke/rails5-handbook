@@ -1,0 +1,18 @@
+COMMON: &COMMON
+  author: "yagisuke"
+  logo:
+    source: "https://pbs.twimg.com/profile_images/765846521740877824/LaKyZJhh_400x400.jpg"
+    width: 215
+    hieght: 215
+
+development:
+  hoge: "development"
+  <<: *COMMON
+
+test:
+  hoge: "test"
+  <<: *COMMON
+
+production:
+  hoge: "production"
+  <<: *COMMON
