@@ -1,0 +1,9 @@
+<div id="main">
+  <%
+    result = @price * @tax
+    totalprice = result.floor
+  %>
+  書籍名: <%= @title %><br>
+  本体価格: ¥<%= @price %><br>
+  税込価格: ¥<%= totalprice %>
+</div>
