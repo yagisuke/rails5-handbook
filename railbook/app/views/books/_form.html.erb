@@ -12,32 +12,32 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :isbn %>
+    <%= f.label :isbn, 'ISBNコード' %>
     <%= f.text_field :isbn %>
   </div>
 
   <div class="field">
-    <%= f.label :title %>
+    <%= f.label :title, '書籍名' %>
     <%= f.text_field :title %>
   </div>
 
   <div class="field">
-    <%= f.label :price %>
+    <%= f.label :price, '価格' %>
     <%= f.number_field :price %>
   </div>
 
   <div class="field">
-    <%= f.label :publish %>
+    <%= f.label :publish, '出版社' %>
     <%= f.text_field :publish %>
   </div>
 
   <div class="field">
-    <%= f.label :published %>
+    <%= f.label :published, '発売日' %>
     <%= f.date_select :published %>
   </div>
 
   <div class="field">
-    <%= f.label :dl %>
+    <%= f.label :dl, 'サンプルダウンロードの有無' %>
     <%= f.check_box :dl %>
   </div>
 
