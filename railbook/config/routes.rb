@@ -27,4 +27,5 @@ Rails.application.routes.draw do
   get 'view/group_select'
   get 'view/group_select2'
   get 'view/dat_select'
+  get 'view/col_radio'
 end
