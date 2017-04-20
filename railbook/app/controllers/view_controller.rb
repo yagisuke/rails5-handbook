@@ -10,4 +10,8 @@ class ViewController < ApplicationController
   def field
     @book = Book.find(1)
   end
+
+  def html5
+    @book = Book.new
+  end
 end
