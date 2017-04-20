@@ -1,4 +1,4 @@
-<%= form_for(@user, url: {controller: :users, action: :create}) do |f| %>
+<%= form_for(@user, url: {controller: :authors, action: :create}) do |f| %>
   <div class="field">
     <%= f.label :username, 'ユーザー名:' %><br>
     <%= f.text_field :username %>
