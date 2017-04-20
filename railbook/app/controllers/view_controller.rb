@@ -33,4 +33,9 @@ class ViewController < ApplicationController
     @review = Review.new
     @authors = Author.all
   end
+
+  def group_select2
+    @review = Review.new
+    @authors = Author.all
+  end
 end
