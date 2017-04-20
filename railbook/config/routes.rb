@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   resources :authors
   resources :users
   resources :books
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  # 第2章
   get 'hello', to: 'hello#index'
   get 'hoge/index', to: 'hello#index'
   get 'hello/view', to: 'hello#view'
@@ -12,4 +13,7 @@ Rails.application.routes.draw do
   get 'hello/list'
   get 'hello/app_var'
 
+  # 第４章
+  get 'view/keyword'
+  post 'keyword/search'
 end
