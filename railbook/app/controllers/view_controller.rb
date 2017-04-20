@@ -15,7 +15,7 @@ class ViewController < ApplicationController
     @book = Book.new
   end
 
-    def select
-      @book = Book.new
-    end
+  def select
+    @book = Book.new
+  end
 end
