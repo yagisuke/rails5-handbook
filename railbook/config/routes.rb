@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   # 第４章
   get 'view/keyword'
   post 'keyword/search'
+  get 'view/form_tag'
+  get 'view/form_for'
 end
