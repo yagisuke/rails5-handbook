@@ -43,4 +43,5 @@ Rails.application.routes.draw do
   get 'view/new'
   get 'view/linkif'
   get 'view/current'
+  get 'view/mailto'
 end
