@@ -41,6 +41,10 @@ module ViewHelper
     raw list.concat('</ul>')
   end
 
+  # cite: URL
+  # citetext: サイト説明文
+  # options: ブロックに付与するプロパティ
+  # &block: ブロック(サイト紹介文)
   def blockquote_tag(cite, citetext, options = {}, &block)
     # 引数optionsに引数citeで指定された引用元URLを追加
     options.merge! cite: cite
