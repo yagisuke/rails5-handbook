@@ -40,4 +40,18 @@ module ViewHelper
     end
     raw list.concat('</ul>')
   end
+
+  def blockquote_tag(cite, citetext, options = {}, &block)
+    # 引数optionsに引数citeで指定された引用元URLを追加
+    options.merge! cite: cite
+    # <blockquote>要素を生成
+    quote_tag = content_tag(:blockquote, capture(&block), options)
+    # 引用元を表す<p>要素を生成
+    p_tag = content_tag(:p) do
+      concat '出典:'
+      concat content_tag(:cite, citetext)
+    end
+    # <blockquote>要素と<p>要素とを連結した結果を返す
+    quote_tag.concat(p_tag)
+  end
 end
