@@ -1,0 +1,7 @@
+<% msg = 'Hi。RailsはRubyベースのフレームワークです。Railsに影響を受けたフレームワークには、Catalystやsymfonyがあります。' %>
+<h2>ノーマルタイプ</h2>
+<%= excerpt(msg, 'Catalyst', radius: 10) %>
+<h2>対象文字列が複数あるタイプ</h2>
+<%= excerpt(msg, 'Rails', radius: 10) %>
+<h2>omission指定タイプ</h2>
+<%= excerpt(msg, 'Catalyst', radius: 10, omission: '〜') %>
