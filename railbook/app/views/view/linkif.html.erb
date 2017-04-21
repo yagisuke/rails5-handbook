@@ -1,0 +1,12 @@
+<% #@user = User.new %>
+<p>
+  <%= link_to_if @user.nil?, 'ログイン', controller: :hello, action: :index %>
+</p>
+<p>
+  <%= link_to_unless @user, 'ログイン', controller: :hello, action: :index %>
+</p>
+<p>
+  <%= link_to_if @user.nil?, 'ログイン', controller: :hello, action: :index do |name|
+    link_to 'マイページ', controller: :hello, action: :index
+  end %>
+</p>
