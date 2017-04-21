@@ -8,4 +8,7 @@ WINGSプロジェクトの山田です。
 <script>alert('HAPPY RAILS');</script>
 EOL
 %>
+<h2>ノーマルタイプのsimple_format</h2>
 <%= simple_format(article, class: :article) %>
+<h2>オプションタイプのsimple_format</h2>
+<%= simple_format(article, {class: :article}, {sanitize: false, wrapper_tag: 'blockquote'}) %>
