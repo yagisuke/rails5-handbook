@@ -47,4 +47,5 @@ Rails.application.routes.draw do
   get 'view/image_tag'
   get 'view/audio'
   get 'view/video'
+  get 'view/path'
 end
