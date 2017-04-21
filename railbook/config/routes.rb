@@ -38,4 +38,5 @@ Rails.application.routes.draw do
   get 'view/format'
   get 'view/number_to'
   get 'view/datetime'
+  get 'view/link'
 end
