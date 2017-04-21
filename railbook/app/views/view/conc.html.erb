@@ -1,0 +1,36 @@
+<table>
+  <thead>
+    <tr>
+      <th>Isbn</th>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Publish</th>
+      <th>Published</th>
+      <th>Dl</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @books.each do |book| %>
+      <tr style="background-color:<%= cycle('#FFFFFF', '#EFF5FB') %>">
+        <td><%= book.isbn %></td>
+        <td>
+          <%
+            if book.price >= 3000
+              concat image_tag 'http://www.wings.msn.to/books/' + book.isbn + '/' + book.isbn + '.jpg', :size => '25x30'
+            end
+          %>
+          <%= book.title %>
+        </td>
+        <td><%= book.price %>円</td>
+        <td><%= book.publish %></td>
+        <td><%= book.published %></td>
+        <td><%= book.dl %></td>
+        <td><%= link_to 'Show', book %></td>
+        <td><%= link_to 'Edit', edit_book_path(book) %></td>
+        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
