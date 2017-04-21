@@ -1,0 +1,16 @@
+<%
+msg = <<EOL
+WINGSニュース特別号
+
+こんにちわ。
+WINGSプロジェクトの山田です。
+<strong class="myClass">【至急】</strong>
+今日は、おすすめ書籍の特集をお送りします。
+<a href="JavaScript:alert('HAPPY RAILS');">HAPPY RAILS</a>
+<a href="https://github.com/yagisuke/rails5-handbook" target="_blank">github</a>
+<script>alert('HAPPY RAILS');</script>
+EOL
+%>
+<%= sanitize msg %>
+<br>
+<%= sanitize msg, tags: %w(p, a), attributes: %w(id class href style) %>
