@@ -29,4 +29,5 @@ Rails.application.routes.draw do
   get 'view/dat_select'
   get 'view/col_radio'
   get 'view/fields'
+  get 'view/simple_format'
 end
