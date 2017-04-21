@@ -52,4 +52,5 @@ Rails.application.routes.draw do
   get 'view/tag'
   get 'view/content_tag'
   get 'view/helper'
+  get 'view/helper2'
 end
