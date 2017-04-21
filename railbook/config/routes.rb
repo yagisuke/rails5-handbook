@@ -39,4 +39,6 @@ Rails.application.routes.draw do
   get 'view/number_to'
   get 'view/datetime'
   get 'view/link'
+  get 'view/urlfor'
+  get 'view/new'
 end

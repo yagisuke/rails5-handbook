@@ -55,4 +55,8 @@ class ViewController < ApplicationController
   def conc
     @books = Book.all
   end
+
+  def new
+    render plain: 'new page.'
+  end
 end
