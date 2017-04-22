@@ -61,6 +61,11 @@ class ViewController < ApplicationController
     render layout: 'view_sub'
   end
 
+  def provide
+    @books = Book.all
+    @title = '@title: provide画面 | Rails入門'
+  end
+
   def new
     render plain: 'new page.'
   end
