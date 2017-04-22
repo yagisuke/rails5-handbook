@@ -60,6 +60,10 @@ class ViewController < ApplicationController
     @book = Book.find(1)
   end
 
+  def partial_param
+    @book = Book.find(1)
+  end
+
   def adopt
     @books = Book.all
     render layout: 'view_sub'

@@ -62,4 +62,5 @@ Rails.application.routes.draw do
   get 'view/quest'
   get 'view/nest'
   get 'view/partial_basic'
+  get 'view/partial_param'
 end
