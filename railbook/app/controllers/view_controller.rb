@@ -85,4 +85,9 @@ class ViewController < ApplicationController
   def new
     render plain: 'new page.'
   end
+
+  def nest
+    @msg = '今日もいい天気です。'
+    render layout: 'child'
+  end
 end
