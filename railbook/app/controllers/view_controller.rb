@@ -64,6 +64,11 @@ class ViewController < ApplicationController
     @book = Book.find(1)
   end
 
+  def nest
+    @msg = '今日もいい天気です。'
+    render layout: 'child'
+  end
+
   def adopt
     @books = Book.all
     render layout: 'view_sub'
@@ -92,10 +97,5 @@ class ViewController < ApplicationController
 
   def new
     render plain: 'new page.'
-  end
-
-  def nest
-    @msg = '今日もいい天気です。'
-    render layout: 'child'
   end
 end
