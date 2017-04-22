@@ -56,4 +56,8 @@ Rails.application.routes.draw do
   get 'view/helper3'
   get 'view/adopt'
   get 'view/provide'
+  get 'view/multi'
+  get 'view/relation'
+  get 'view/download'
+  get 'view/quest'
 end

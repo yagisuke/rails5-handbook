@@ -66,6 +66,22 @@ class ViewController < ApplicationController
     @title = '@title: provide画面 | Rails入門'
   end
 
+  def multi
+    render layout: 'layout'
+  end
+
+  def relation
+    render plain: 'relation'
+  end
+
+  def download
+    render plain: 'download'
+  end
+
+  def quest
+    render plain: 'quest'
+  end
+
   def new
     render plain: 'new page.'
   end
