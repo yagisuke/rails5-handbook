@@ -56,6 +56,11 @@ class ViewController < ApplicationController
     @books = Book.all
   end
 
+  def adopt
+    @books = Book.all
+    render layout: 'view_sub'
+  end
+
   def new
     render plain: 'new page.'
   end

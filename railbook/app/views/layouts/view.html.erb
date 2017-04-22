@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= favicon_link_tag %>
+    <title>view template</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <p style="color: gray;">view controller専用 テンプレート適用中。</p>
+    <%= yield %>
+  </body>
+</html>
