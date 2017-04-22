@@ -64,6 +64,10 @@ class ViewController < ApplicationController
     @book = Book.find(1)
   end
 
+  def partial_col
+    @books = Book.all
+  end
+
   def nest
     @msg = '今日もいい天気です。'
     render layout: 'child'
