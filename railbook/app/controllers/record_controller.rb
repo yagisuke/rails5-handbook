@@ -48,4 +48,8 @@ class RecordController < ApplicationController
     @books = Book.where('price > 2000').select(:isbn, :title, :price, :publish, :published, :dl)
     render 'hello/list'
   end
+
+  def select2
+    @pubs = Book.select(:publish).distinct.order(publish: :desc)
+  end
 end
