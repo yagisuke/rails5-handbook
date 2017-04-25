@@ -23,4 +23,9 @@ class RecordController < ApplicationController
     @books = Book.where('publish = ? AND price >= ?', params[:publish], params[:price])
     render 'hello/list'
   end
+
+  def not
+    @books = Book.where.not(isbn: params[:id])
+    render 'books/index'
+  end
 end
