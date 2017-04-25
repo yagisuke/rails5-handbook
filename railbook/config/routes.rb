@@ -79,4 +79,5 @@ Rails.application.routes.draw do
   get 'record/select'
   get 'record/select2'
   get 'record/offset'
+  get 'record/page(/:id)', to: 'record#page'
 end
