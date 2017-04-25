@@ -68,4 +68,5 @@ Rails.application.routes.draw do
   # 第5章
   get 'record/find'
   get 'record/find_by'
+  get 'record/find_by2'
 end
