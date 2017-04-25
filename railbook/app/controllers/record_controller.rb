@@ -33,4 +33,9 @@ class RecordController < ApplicationController
     @books = Book.where(publish: '技術評論社').or(Book.where('price > 3500'))
     render 'hello/list'
   end
+
+  def order
+    @books = Book.where(publish: '技術評論社').order(published: :desc)
+    render 'hello/list'
+  end
 end
