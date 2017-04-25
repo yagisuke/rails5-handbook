@@ -43,4 +43,9 @@ class RecordController < ApplicationController
     @books = Book.where(publish: '技術評論社').order(published: :desc).reorder(published: :asc)
     render 'hello/list'
   end
+
+  def select
+    @books = Book.where('price > 2000').select(:isbn, :title, :price, :publish, :published, :dl)
+    render 'hello/list'
+  end
 end

@@ -76,4 +76,5 @@ Rails.application.routes.draw do
   get 'record/where_or'
   get 'record/order'
   get 'record/reorder'
+  get 'record/select'
 end
