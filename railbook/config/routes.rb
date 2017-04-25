@@ -78,4 +78,5 @@ Rails.application.routes.draw do
   get 'record/reorder'
   get 'record/select'
   get 'record/select2'
+  get 'record/offset'
 end
