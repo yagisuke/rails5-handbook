@@ -89,4 +89,10 @@ class RecordController < ApplicationController
       .having('AVG(price) >= ?', 2500)
     render 'record/groupby'
   end
+
+  def unscope
+    @books = Book.where(publish: '技術評論社').order(:price)
+      .select(:isbn, :title).unscope(:where, :select)
+    render 'books/index'
+  end
 end

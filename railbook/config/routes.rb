@@ -84,4 +84,5 @@ Rails.application.routes.draw do
   get 'record/last'
   get 'record/groupby'
   get 'record/havingby'
+  get 'record/unscope'
 end
