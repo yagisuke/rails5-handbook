@@ -70,6 +70,7 @@ Rails.application.routes.draw do
   get 'record/find_by'
   get 'record/find_by2'
   get 'record/where'
+  get 'record/where2'
   get 'record/keyword'
   post 'record/ph1'
   get 'record/not(/:id)', to: 'record#not'

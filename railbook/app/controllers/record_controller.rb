@@ -19,6 +19,13 @@ class RecordController < ApplicationController
     render 'hello/list'
   end
 
+  def where2
+    @books = Book.all
+    @books.where!(publish: '技術評論社')
+    @books.order!(published: :desc)
+    render 'hello/list'
+  end
+
   def ph1
     @books = Book.where('publish = ? AND price >= ?', params[:publish], params[:price])
     render 'hello/list'
