@@ -85,4 +85,5 @@ Rails.application.routes.draw do
   get 'record/groupby'
   get 'record/havingby'
   get 'record/unscope'
+  get 'record/none(/:id)', to: 'record#none'
 end
