@@ -1,0 +1,17 @@
+<table>
+  <thead>
+    <tr>
+      <th>Publish</th>
+      <th>AVG Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @books.each do |book| %>
+      <tr style="background-color:<%= cycle('#FFFFFF', '#EFF5FB') %>">
+        <td><%= book.publish %></td>
+        <td><%= book.avg_price.ceil %>円</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= debug(@books) %>
