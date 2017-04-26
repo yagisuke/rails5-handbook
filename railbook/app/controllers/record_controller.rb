@@ -70,6 +70,12 @@ class RecordController < ApplicationController
     render 'books/show'
   end
 
+  def groupby
+    @books = Book.select('publish, AVG(price) AS avg_price')
+      .group(:publish)
+    render 'record/groupby'
+  end
+
   def havingby
     @books = Book.select('publish, AVG(price) AS avg_price')
       .group(:publish)
