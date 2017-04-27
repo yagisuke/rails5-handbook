@@ -87,4 +87,5 @@ Rails.application.routes.draw do
   get 'record/unscope'
   get 'record/none(/:id)', to: 'record#none'
   get 'record/pluck'
+  get 'record/exists'
 end

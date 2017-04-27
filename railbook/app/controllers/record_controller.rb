@@ -114,4 +114,9 @@ class RecordController < ApplicationController
   def pluck
     render plain: Book.where(publish: '技術評論社').pluck(:title, :price)
   end
+
+  def exists
+    flag = Book.where(publish: 'hoge出版社').exists?
+    render plain: "存在するか？ : #{flag}"
+  end
 end
