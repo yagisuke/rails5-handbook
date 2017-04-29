@@ -95,4 +95,5 @@ Rails.application.routes.draw do
   get 'record/count'
   get 'record/publish_count'
   get 'record/average'
+  get 'record/literal_sql'
 end
