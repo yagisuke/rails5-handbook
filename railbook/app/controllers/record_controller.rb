@@ -161,4 +161,9 @@ class RecordController < ApplicationController
       HAVING AVG(price) >= ?', 2500])
     render 'record/groupby'
   end
+
+  def update_all
+    cnt = Book.where(publish: 'Gihyo').update_all(publish: '技術評論社')
+    render plain: "#{cnt}のデータを更新しました。"
+  end
 end
