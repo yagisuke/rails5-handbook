@@ -93,4 +93,5 @@ Rails.application.routes.draw do
   get 'record/def_scope'
   get 'record/count'
   get 'record/publish_count'
+  get 'record/average'
 end
