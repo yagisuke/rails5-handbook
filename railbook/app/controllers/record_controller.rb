@@ -133,4 +133,9 @@ class RecordController < ApplicationController
   def def_scope
     render plain: Review.all.inspect
   end
+
+  def count
+    cnt = Book.where(publish: '技術評論社').count
+    render plain: "#{cnt}件です。"
+  end
 end
