@@ -129,4 +129,8 @@ class RecordController < ApplicationController
     @books = Book.whats_new('技術評論社')
     render 'hello/list'
   end
+
+  def def_scope
+    render plain: Review.all.inspect
+  end
 end

@@ -90,4 +90,5 @@ Rails.application.routes.draw do
   get 'record/exists'
   get 'record/scope'
   get 'record/publish_rank'
+  get 'record/def_scope'
 end
