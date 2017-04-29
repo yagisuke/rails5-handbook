@@ -83,6 +83,7 @@ Rails.application.routes.draw do
   get 'record/page(/:id)', to: 'record#page'
   get 'record/last'
   get 'record/groupby'
+  get 'record/groupby2'
   get 'record/havingby'
   get 'record/unscope'
   get 'record/none(/:id)', to: 'record#none'
