@@ -138,4 +138,9 @@ class RecordController < ApplicationController
     cnt = Book.where(publish: '技術評論社').count
     render plain: "#{cnt}件です。"
   end
+
+  def publish_count
+    cnt = Book.distinct.count(:publish)
+    render plain: "#{cnt}件です。"
+  end
 end

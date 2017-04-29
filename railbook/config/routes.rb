@@ -92,4 +92,5 @@ Rails.application.routes.draw do
   get 'record/publish_rank'
   get 'record/def_scope'
   get 'record/count'
+  get 'record/publish_count'
 end
