@@ -119,4 +119,14 @@ class RecordController < ApplicationController
     flag = Book.where(publish: 'hoge出版社').exists?
     render plain: "存在するか？ : #{flag}"
   end
+
+  def scope
+    @books = Book.gihyo.top10
+    render 'hello/list'
+  end
+
+  def publish_rank
+    @books = Book.whats_new('技術評論社')
+    render 'hello/list'
+  end
 end

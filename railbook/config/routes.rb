@@ -88,4 +88,6 @@ Rails.application.routes.draw do
   get 'record/none(/:id)', to: 'record#none'
   get 'record/pluck'
   get 'record/exists'
+  get 'record/scope'
+  get 'record/publish_rank'
 end
