@@ -99,4 +99,5 @@ Rails.application.routes.draw do
   get 'record/update_all'
   get 'record/update_all2'
   get 'record/destroy', to: 'record#destroy'
+  get 'record/transact'
 end

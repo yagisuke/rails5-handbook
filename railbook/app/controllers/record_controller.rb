@@ -172,9 +172,35 @@ class RecordController < ApplicationController
     render plain: "#{cnt}件のデータを更新しました。"
   end
 
-
   def destroy
     Book.where(publish: 'hoge').destroy_all
     render plain: '削除完了'
+  end
+
+  def transact
+      Book.transaction do
+        b1 = Book.new({
+          isbn: '978-4-7741-5067-3',
+          title: 'Rubyポケットリファレンス',
+          price: 2580,
+          publish: '技術評論社',
+          published: '2017-04-17',
+          dl: 'f'})
+        b1.save!
+
+        raise '例外発生: 処理はキャンセルされました'
+
+        b2 = Book.new({
+          isbn: '978-4-7741-5067-5',
+          title: 'Tomcatポケットリファレンス',
+          price: 2500,
+          publish: '技術評論社',
+          published: '2017-05-10',
+          dl: 'f'})
+        b2.save!
+      end
+      render plain: 'トランザクションは成功しました。'
+    rescue => e
+      render plain: e.message
   end
 end
