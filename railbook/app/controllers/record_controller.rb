@@ -209,4 +209,9 @@ class RecordController < ApplicationController
     @review.published!
     render plain: 'ステータス: ' + @review.status
   end
+
+  def get_published
+    @reviews = Review.published
+    render 'reviews/index'
+  end
 end

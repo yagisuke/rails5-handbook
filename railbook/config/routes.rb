@@ -102,4 +102,5 @@ Rails.application.routes.draw do
   get 'record/destroy', to: 'record#destroy'
   get 'record/transact'
   get 'record/enum_rec'
+  get 'record/get_published'
 end
