@@ -3,7 +3,7 @@ class Book < ApplicationRecord
     presence: true,
     uniqueness: { allow_blank: true, message: 'は一意でなければなりません' },
     length: { is: 17, allow_blank: true, message: 'は%{count}桁でなければなりません' },
-    isbn: { allow_old: true }
+    isbn: { allow_old: true, allow_blank: true }
   validates :title,
     presence: true,
     length: { minimum: 1, maximum: 100, allow_blank: true }
