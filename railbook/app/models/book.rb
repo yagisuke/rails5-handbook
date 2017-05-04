@@ -11,6 +11,7 @@ class Book < ApplicationRecord
     numericality: { only_integer: true, less_than: 10000 }
   validates :publish,
     inclusion: { in: ['技術評論社', '秀和システム', '日経BP社', '翔泳社', 'ソシム']}
+  validates :title, uniqueness: { scope: :publish }
 
   scope :gihyo, -> { where(publish: '技術評論社') }
   scope :newer, -> { order(published: :desc) }
