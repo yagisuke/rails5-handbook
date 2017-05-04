@@ -1,9 +1,9 @@
 class Book < ApplicationRecord
   validates :isbn,
     presence: true,
-    uniqueness: { allow_blank: true },
-    length: { is: 17, allow_blank: true },
-    format: { with: /\A[0-9]{3}-[0-9]{1}-[0-9]{3,5}-[0-9]{4}-[0-9X]{1}\z/, allow_blank: true }
+    uniqueness: { allow_blank: true, message: 'は一意でなければなりません' },
+    length: { is: 17, allow_blank: true, message: 'は%{count}桁でなければなりません' },
+    format: { with: /\A[0-9]{3}-[0-9]{1}-[0-9]{3,5}-[0-9]{4}-[0-9X]{1}\z/, allow_blank: true, message: '%{value}は正しい形式ではありません'  }
   validates :title,
     presence: true,
     length: { minimum: 1, maximum: 100, allow_blank: true }
