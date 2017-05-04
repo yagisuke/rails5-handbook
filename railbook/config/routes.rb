@@ -103,4 +103,6 @@ Rails.application.routes.draw do
   get 'record/transact'
   get 'record/enum_rec'
   get 'record/get_published'
+  get 'record/keywd'
+  post 'record/keywd_process'
 end
