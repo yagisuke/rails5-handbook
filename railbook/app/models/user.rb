@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   validates :agreement,
-    acceptance: true
-  validates :email, confirmation: true
+    acceptance: { on: :create }
+  validates :email, confirmation: { on: :create }
 
   has_one :author
   has_many :reviews
