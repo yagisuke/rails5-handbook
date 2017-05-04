@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  validates :email, presence: { if: '!dm.blank?' }
   validates :email, confirmation: { on: :create }
   validates :agreement,
     acceptance: { on: :create }
