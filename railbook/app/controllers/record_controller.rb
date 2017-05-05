@@ -236,4 +236,8 @@ class RecordController < ApplicationController
   def hasmany
     @book = Book.find_by(isbn: '978-4-7980-4803-1')
   end
+
+  def hasone
+    @user = User.find(1)
+  end
 end
