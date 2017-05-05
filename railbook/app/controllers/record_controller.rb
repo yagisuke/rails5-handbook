@@ -256,4 +256,26 @@ class RecordController < ApplicationController
   def cache_counter
     @user = User.find(1)
   end
+
+  def book_memorize
+    @book = Book.find(1)
+    # 書籍情報に関連するメモを登録
+    @memo = @book.memos.build({ body: 'あとで買う' })
+    if @memo.save
+      render plain: 'メモを作成しました。'
+    else
+      render plain: @memo.errors.full_messages[0]
+    end
+  end
+
+  def author_memorize
+    @author = Author.find(1)
+    # 書籍情報に関連するメモを登録
+    @memo = @author.memos.build({ body: 'この人イケメン' })
+    if @memo.save
+      render plain: 'メモを作成しました。'
+    else
+      render plain: @memo.errors.full_messages[0]
+    end
+  end
 end
