@@ -114,4 +114,5 @@ Rails.application.routes.draw do
   get 'record/cache_counter'
   get 'record/book_memorize'
   get 'record/author_memorize'
+  get 'record/assoc_join'
 end
