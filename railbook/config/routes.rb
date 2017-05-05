@@ -108,4 +108,5 @@ Rails.application.routes.draw do
   get 'record/belongs'
   get 'record/hasmany'
   get 'record/hasone'
+  get 'record/has_and_belongs'
 end
