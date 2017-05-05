@@ -232,4 +232,8 @@ class RecordController < ApplicationController
   def belongs
     @review = Review.find(3)
   end
+
+  def hasmany
+    @book = Book.find_by(isbn: '978-4-7980-4803-1')
+  end
 end

@@ -19,4 +19,6 @@ class Book < ApplicationRecord
   scope :whats_new, ->(pub) {
     where(publish: pub).order(published: :desc).limit(5)
   }
+
+  has_many :reviews
 end
