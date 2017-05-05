@@ -4,7 +4,7 @@ class Review < ApplicationRecord
     published: 1,
     deleted: 2
   }
-  
+
   belongs_to :book
   belongs_to :user
 

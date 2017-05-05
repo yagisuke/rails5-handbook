@@ -228,4 +228,8 @@ class RecordController < ApplicationController
       render plain: @search.errors.full_messages[0]
     end
   end
+
+  def belongs
+    @review = Review.find(3)
+  end
 end

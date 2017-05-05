@@ -105,4 +105,5 @@ Rails.application.routes.draw do
   get 'record/get_published'
   get 'record/keywd'
   post 'record/keywd_process'
+  get 'record/belongs'
 end
