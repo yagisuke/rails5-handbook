@@ -111,4 +111,5 @@ Rails.application.routes.draw do
   get 'record/has_and_belongs'
   get 'record/has_many_through'
   get 'record/fan_comment'
+  get 'record/cache_counter'
 end

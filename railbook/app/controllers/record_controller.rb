@@ -249,8 +249,11 @@ class RecordController < ApplicationController
     @user = User.find_by(username: 'isatou')
   end
 
-
   def fan_comment
     @author = Author.find(1)
+  end
+
+  def cache_counter
+    @user = User.find(1)
   end
 end
