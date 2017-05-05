@@ -248,4 +248,9 @@ class RecordController < ApplicationController
   def has_many_through
     @user = User.find_by(username: 'isatou')
   end
+
+
+  def fan_comment
+    @author = Author.find(1)
+  end
 end
