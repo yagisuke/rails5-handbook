@@ -303,4 +303,8 @@ class RecordController < ApplicationController
       select('books.title, reviews.body, "読者より" as name')
     render 'record/assoc_join'
   end
+
+  def assoc_includes
+    @books = Book.includes(:reviews).all
+  end
 end
