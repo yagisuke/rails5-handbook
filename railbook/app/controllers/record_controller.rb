@@ -282,20 +282,20 @@ class RecordController < ApplicationController
   def assoc_join
     @books = Book.joins(:reviews, :authors).
       order('books.title, reviews.updated_at').
-      select('books.id, books.title, books.published, books.price, reviews.body, authors.name')
-    render plain: @books.inspect
+      select('books.title, reviews.body, authors.name')
+    render 'record/assoc_join'
   end
 
   def assoc_join2
     @books = Book.joins('LEFT OUTER JOIN reviews ON reviews.book_id = books.id').
-      select('books.id, books.title, books.published, books.price, reviews.body')
-    render plain: @books.inspect
+      select('books.title, reviews.body, "読者より" as name')
+    render 'record/assoc_join'
   end
 
 
   def assoc_join3
     @books = Book.joins(reviews: :user).
-      select('books.id, books.title, books.published, books.price, reviews.body, users.username')
-    render plain: @books.inspect
+      select('books.title, reviews.body, users.username as name')
+    render 'record/assoc_join'
   end
 end

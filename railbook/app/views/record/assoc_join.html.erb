@@ -1,0 +1,7 @@
+<% @books.each do |b| %>
+  <% if b.body? %>
+    <p>
+      <%= b.body %> (<%= b.title %> : <%= b.name %>)
+    </p>
+  <% end %>
+<% end %>
