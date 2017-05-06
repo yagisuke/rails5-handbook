@@ -117,4 +117,5 @@ Rails.application.routes.draw do
   get 'record/assoc_join'
   get 'record/assoc_join2'
   get 'record/assoc_join3'
+  get 'record/assoc_join4'
 end
