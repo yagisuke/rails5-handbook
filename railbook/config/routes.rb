@@ -116,4 +116,5 @@ Rails.application.routes.draw do
   get 'record/author_memorize'
   get 'record/assoc_join'
   get 'record/assoc_join2'
+  get 'record/assoc_join3'
 end

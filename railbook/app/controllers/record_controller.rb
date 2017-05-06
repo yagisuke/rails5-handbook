@@ -291,4 +291,11 @@ class RecordController < ApplicationController
       select('books.id, books.title, books.published, books.price, reviews.body')
     render plain: @books.inspect
   end
+
+
+  def assoc_join3
+    @books = Book.joins(reviews: :user).
+      select('books.id, books.title, books.published, books.price, reviews.body, users.username')
+    render plain: @books.inspect
+  end
 end
