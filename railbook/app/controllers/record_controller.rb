@@ -285,4 +285,10 @@ class RecordController < ApplicationController
       select('books.id, books.title, books.published, books.price, reviews.body, authors.name')
     render plain: @books.inspect
   end
+
+  def assoc_join2
+    @books = Book.joins('LEFT OUTER JOIN reviews ON reviews.book_id = books.id').
+      select('books.id, books.title, books.published, books.price, reviews.body')
+    render plain: @books.inspect
+  end
 end
