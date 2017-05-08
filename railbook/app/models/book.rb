@@ -25,10 +25,7 @@ class Book < ApplicationRecord
   has_and_belongs_to_many :authors
   has_many :memos, as: :memoable
 
-  after_destroy :history_book
-
-  private
-    def history_book
-      logger.info('deleted: ' + self.inspect)
-    end
+  after_destroy do |b|
+    logger.info('deleted: ' + b.inspect)
+  end
 end
