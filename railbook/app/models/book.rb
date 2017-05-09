@@ -25,7 +25,5 @@ class Book < ApplicationRecord
   has_and_belongs_to_many :authors
   has_many :memos, as: :memoable
 
-  after_destroy do |b|
-    logger.info('deleted: ' + b.inspect)
-  end
+  after_destroy BookCallbacks.new
 end
