@@ -1,5 +1,5 @@
 # 内容
-Ruby on Rails 5アプリケーションプログラミング
+Ruby on Rails 5アプリケーションプログラミング<br>
 http://www.wings.msn.to/index.php/-/A-03/978-4-7741-8883-6/
 
 ## 環境
