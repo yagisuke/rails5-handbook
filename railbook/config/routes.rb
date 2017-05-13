@@ -121,5 +121,5 @@ Rails.application.routes.draw do
   get 'record/assoc_includes'
 
   # 第6章
-  get 'ctrl/find'
+  get 'ctrl/para(/:id)', to: 'ctrl#para'
 end
