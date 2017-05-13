@@ -9,7 +9,8 @@ class CtrlController < ApplicationController
   end
 
   def req_head
-    render plain: request.headers.inspect
+    @headers = request.headers
+    render 'ctrl/req_head'
   end
 
   def req_head_ua
