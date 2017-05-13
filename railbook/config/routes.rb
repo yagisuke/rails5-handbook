@@ -119,4 +119,7 @@ Rails.application.routes.draw do
   get 'record/assoc_join3'
   get 'record/assoc_join4'
   get 'record/assoc_includes'
+
+  # 第6章
+  get 'ctrl/find'
 end
