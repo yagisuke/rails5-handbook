@@ -127,4 +127,6 @@ Rails.application.routes.draw do
   get 'ctrl/req_head_ua'
   get 'ctrl/upload'
   post 'ctrl/upload_process'
+  get 'ctrl/updb(/:id)', to: 'ctrl#updb'
+  patch 'ctrl/updb_process(/:id)', to: 'ctrl#updb_process'
 end

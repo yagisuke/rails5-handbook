@@ -44,4 +44,18 @@ class CtrlController < ApplicationController
     # 成功 / エラーメッセージを表示
     render plain: result
   end
+
+  def updb
+    @author = Author.find(params[:id])
+  end
+
+  def updb_process
+    @author = Author.find(params[:id])
+
+    if @author.update(params.require(:author).permit(:data))
+      render plain: '保存に成功しました'
+    else
+      render plain: @author.errors.full_messages[0]
+    end
+  end
 end
