@@ -125,4 +125,6 @@ Rails.application.routes.draw do
   get 'ctrl/para_array'
   get 'ctrl/req_head'
   get 'ctrl/req_head_ua'
+  get 'ctrl/upload'
+  post 'ctrl/upload_process'
 end
