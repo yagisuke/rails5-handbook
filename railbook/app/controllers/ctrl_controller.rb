@@ -20,10 +20,13 @@ class CtrlController < ApplicationController
   def upload_process
     # アップロードファイルを取得
     file = params[:upfile]
+
     # ファイルのベース名(パスを除いた部分)
     img_name = file.original_filename
+
     # 許可する拡張子を定義
     perms = ['.jpg', '.jpeg', '.gif', '.png']
+
     # 配列permsにアップロードファイルの拡張子に合致するものがあるか
     if !perms.include?(File.extname(img_name).downcase)
       result = 'アップロードできるのは画像ファイルのみです'
@@ -37,6 +40,7 @@ class CtrlController < ApplicationController
       }
       result = "#{img_name}をアップロードしました。"
     end
+
     # 成功 / エラーメッセージを表示
     render plain: result
   end
