@@ -122,4 +122,5 @@ Rails.application.routes.draw do
 
   # 第6章
   get 'ctrl/para(/:id)', to: 'ctrl#para'
+  get 'ctrl/para_array'
 end
