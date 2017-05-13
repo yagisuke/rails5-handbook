@@ -58,4 +58,8 @@ class CtrlController < ApplicationController
       render plain: @author.errors.full_messages[0]
     end
   end
+
+  def get_html
+    render html: '<p style="color: red;">HELLO WORLD.</p>'.html_safe
+  end
 end
