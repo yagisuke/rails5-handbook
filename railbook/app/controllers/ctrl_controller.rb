@@ -60,6 +60,9 @@ class CtrlController < ApplicationController
   end
 
   def get_html
-    render html: '<p style="color: red;">HELLO WORLD.</p>'.html_safe
+    render html: '
+      <p style="color: red;">HELLO WORLD.</p>
+      <script>console.log("hello world");</script>
+    '.html_safe
   end
 end
