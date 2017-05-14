@@ -134,4 +134,5 @@ Rails.application.routes.draw do
   get 'ctrl/redirect'
   get 'ctrl/redirect_controller'
   get 'ctrl/redirect_action'
+  get 'ctrl/send_file_img'
 end

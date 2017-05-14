@@ -81,4 +81,8 @@ class CtrlController < ApplicationController
   def redirect_action
     redirect_to action: :req_head
   end
+
+  def send_file_img
+    send_file 'public/docs/yagi_suke.jpg', type: 'image/jpeg', disposition: :attachment
+  end
 end
