@@ -131,4 +131,7 @@ Rails.application.routes.draw do
   patch 'ctrl/updb_process(/:id)', to: 'ctrl#updb_process'
   get 'ctrl/get_html'
   get 'ctrl/not_found'
+  get 'ctrl/redirect'
+  get 'ctrl/redirect_controller'
+  get 'ctrl/redirect_action'
 end

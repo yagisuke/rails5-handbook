@@ -69,4 +69,16 @@ class CtrlController < ApplicationController
   def not_found
     render plain: 'お探しのページは見つかりませんでした。', status: 404
   end
+
+  def redirect
+    redirect_to 'http://www.wings.msn.to/'
+  end
+
+  def redirect_controller
+    redirect_to controller: :hello, action: :list
+  end
+
+  def redirect_action
+    redirect_to action: :req_head
+  end
 end
