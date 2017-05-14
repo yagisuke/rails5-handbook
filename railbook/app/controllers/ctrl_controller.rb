@@ -65,4 +65,8 @@ class CtrlController < ApplicationController
       <script>console.log("hello world");</script>
     '.html_safe
   end
+
+  def not_found
+    render plain: 'お探しのページは見つかりませんでした。', status: 404
+  end
 end

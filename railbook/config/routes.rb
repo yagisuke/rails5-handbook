@@ -130,4 +130,5 @@ Rails.application.routes.draw do
   get 'ctrl/updb(/:id)', to: 'ctrl#updb'
   patch 'ctrl/updb_process(/:id)', to: 'ctrl#updb_process'
   get 'ctrl/get_html'
+  get 'ctrl/not_found'
 end
