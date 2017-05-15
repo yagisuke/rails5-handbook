@@ -91,4 +91,14 @@ class CtrlController < ApplicationController
     @author = Author.find(id)
     send_data @author.photo, type: @author.ctype, disposition: :inline
   end
+
+  def log
+    logger.unknown('unknown')
+    logger.fatal('fatal')
+    logger.error('error')
+    logger.warn('warn')
+    logger.info('info')
+    logger.debug('debug')
+    render plain: 'ログはコンソールまたはログファイルから確認してください'
+  end
 end
