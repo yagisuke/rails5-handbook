@@ -135,4 +135,5 @@ Rails.application.routes.draw do
   get 'ctrl/redirect_controller'
   get 'ctrl/redirect_action'
   get 'ctrl/send_file_img'
+  get 'ctrl/show_photo(/:id)', to: 'ctrl#show_photo'
 end

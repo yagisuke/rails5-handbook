@@ -85,4 +85,10 @@ class CtrlController < ApplicationController
   def send_file_img
     send_file 'public/docs/yagi_suke.jpg', type: 'image/jpeg', disposition: :attachment
   end
+
+  def show_photo
+    id = params[:id] ? params[:id] : 1
+    @author = Author.find(id)
+    send_data @author.photo, type: @author.ctype, disposition: :inline
+  end
 end
