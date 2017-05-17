@@ -106,4 +106,9 @@ class CtrlController < ApplicationController
     @review = Review.find(1)
     render json: @review
   end
+
+  def get_xml
+    @reviews = Review.all
+    render xml: @reviews
+  end
 end

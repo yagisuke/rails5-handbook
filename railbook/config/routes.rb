@@ -138,4 +138,5 @@ Rails.application.routes.draw do
   get 'ctrl/show_photo(/:id)', to: 'ctrl#show_photo'
   get 'ctrl/log'
   get 'ctrl/get_json'
+  get 'ctrl/get_xml'
 end
