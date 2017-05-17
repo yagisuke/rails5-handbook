@@ -101,4 +101,9 @@ class CtrlController < ApplicationController
     logger.debug('debug')
     render plain: 'ログはコンソールまたはログファイルから確認してください'
   end
+
+  def get_json
+    @review = Review.find(1)
+    render json: @review
+  end
 end

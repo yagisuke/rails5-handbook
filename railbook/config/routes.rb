@@ -137,4 +137,5 @@ Rails.application.routes.draw do
   get 'ctrl/send_file_img'
   get 'ctrl/show_photo(/:id)', to: 'ctrl#show_photo'
   get 'ctrl/log'
+  get 'ctrl/get_json'
 end
