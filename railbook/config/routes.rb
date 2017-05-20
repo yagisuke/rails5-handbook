@@ -140,4 +140,6 @@ Rails.application.routes.draw do
   get 'ctrl/get_json'
   get 'ctrl/get_xml'
   get 'ctrl/download'
+  get 'ctrl/cookie'
+  post 'ctrl/cookie_rec'
 end

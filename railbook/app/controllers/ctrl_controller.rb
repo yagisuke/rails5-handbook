@@ -115,4 +115,19 @@ class CtrlController < ApplicationController
   def download
     @books = Book.all
   end
+
+  def cookie
+    # テンプレート変数@emailにクッキー値をセット
+    @email = cookies[:email]
+  end
+
+  def cookie_rec
+    # クッキー:emailをセット（有効期限は3ヶ月）
+    cookies[:email] = {
+      value: params[:email],
+      expires: 3.months.from_now,
+      http_only: true
+    }
+    render plain: 'クッキーを保存しました'
+  end
 end
