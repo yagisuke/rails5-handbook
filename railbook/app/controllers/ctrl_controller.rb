@@ -111,4 +111,8 @@ class CtrlController < ApplicationController
     @reviews = Review.all
     render xml: @reviews
   end
+
+  def download
+    @books = Book.all
+  end
 end

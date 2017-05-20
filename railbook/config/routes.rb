@@ -139,4 +139,5 @@ Rails.application.routes.draw do
   get 'ctrl/log'
   get 'ctrl/get_json'
   get 'ctrl/get_xml'
+  get 'ctrl/download'
 end
