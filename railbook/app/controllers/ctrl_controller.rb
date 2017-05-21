@@ -130,4 +130,13 @@ class CtrlController < ApplicationController
     }
     render plain: 'クッキーを保存しました'
   end
+
+  def session_show
+    @email = session[:email]
+  end
+
+  def session_rec
+    session[:email] = params[:email]
+    render plain: 'セッションを保存しました'
+  end
 end

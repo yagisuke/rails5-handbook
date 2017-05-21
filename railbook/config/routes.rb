@@ -142,4 +142,6 @@ Rails.application.routes.draw do
   get 'ctrl/download'
   get 'ctrl/cookie'
   post 'ctrl/cookie_rec'
+  get 'ctrl/session_show'
+  post 'ctrl/session_rec'
 end
