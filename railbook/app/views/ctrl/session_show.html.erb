@@ -1,3 +1,5 @@
+<p id="notice"><%= notice %></p>
+
 <%= form_tag(action: :session_rec) do %>
   <%= label_tag :email, 'メールアドレス' %>
   <%= text_field_tag :email, @email, size: 50 %>

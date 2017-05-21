@@ -137,6 +137,13 @@ class CtrlController < ApplicationController
 
   def session_rec
     session[:email] = params[:email]
-    render plain: 'セッションを保存しました'
+    flash[:notice] = 'セッションを保存しました'
+    redirect_to action: :session_show
+  end
+
+  def session_delete
+    session[:email] = nil
+    flash[:notice] = 'セッションを削除しました'
+    redirect_to action: :session_show
   end
 end
