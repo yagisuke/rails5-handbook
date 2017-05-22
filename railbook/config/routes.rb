@@ -145,4 +145,5 @@ Rails.application.routes.draw do
   get 'ctrl/session_show'
   post 'ctrl/session_rec'
   get 'ctrl/session_delete'
+    get 'ctrl/session_all_delete'
 end

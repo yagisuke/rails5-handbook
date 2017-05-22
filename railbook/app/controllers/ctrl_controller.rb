@@ -146,4 +146,10 @@ class CtrlController < ApplicationController
     flash[:notice] = 'セッションを削除しました'
     redirect_to action: :session_show
   end
+
+  def session_all_delete
+    reset_session
+    flash[:notice] = 'すべてのセッションを削除しました'
+    redirect_to action: :session_show
+  end
 end
