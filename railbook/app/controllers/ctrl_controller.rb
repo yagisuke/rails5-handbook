@@ -1,4 +1,11 @@
 class CtrlController < ApplicationController
+  before_action :start_logger
+  after_action :end_logger
+
+  def index
+    sleep 3
+    render plain: 'indexアクションが実行されました'
+  end
 
   def para
     render plain: 'idパラメータ: ' + params[:id]
@@ -152,4 +159,15 @@ class CtrlController < ApplicationController
     flash[:notice] = 'すべてのセッションを削除しました'
     redirect_to action: :session_show
   end
+
+  private
+    # 開始時刻をログに記録
+    def start_logger
+      logger.debug('[Start] ' + Time.now.to_s)
+    end
+
+    # 終了時刻をログに記録
+    def end_logger
+      logger.debug('[Finish] ' + Time.now.to_s)
+    end
 end

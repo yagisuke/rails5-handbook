@@ -121,6 +121,7 @@ Rails.application.routes.draw do
   get 'record/assoc_includes'
 
   # 第6章
+  get 'ctrl/index'
   get 'ctrl/para(/:id)', to: 'ctrl#para'
   get 'ctrl/para_array'
   get 'ctrl/req_head'
@@ -145,5 +146,5 @@ Rails.application.routes.draw do
   get 'ctrl/session_show'
   post 'ctrl/session_rec'
   get 'ctrl/session_delete'
-    get 'ctrl/session_all_delete'
+  get 'ctrl/session_all_delete'
 end
