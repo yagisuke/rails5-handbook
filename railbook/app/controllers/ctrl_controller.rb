@@ -1,6 +1,6 @@
 class CtrlController < ApplicationController
-  before_action :start_logger
-  after_action :end_logger
+  before_action :start_logger, only: [:index, :para] # start_loggerはindex, paraアクションのみ処理させる
+  after_action :end_logger, except: :index # end_loggerはindexのみ適用しない
 
   def index
     sleep 3
