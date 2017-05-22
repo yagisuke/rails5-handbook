@@ -1,5 +1,8 @@
 class HelloController < ApplicationController
+  around_action :around_logger
+
   def index
+    sleep 1
     render plain: 'hello world.'
   end
 
@@ -18,4 +21,11 @@ class HelloController < ApplicationController
   def app_var
     render plain: MY_APP['logo']['source']
   end
+
+  private
+    def around_logger
+      logger.debug('[START] ' + Time.now.to_s)
+      yield
+      logger.debug('[ END ] ' + Time.now.to_s)
+    end
 end
