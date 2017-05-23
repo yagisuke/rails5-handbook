@@ -2,6 +2,7 @@ class CtrlController < ApplicationController
   before_action :start_logger, only: [:index, :para] # start_loggerはindex, paraアクションのみ処理させる
   after_action :end_logger, except: :index # end_loggerはindexのみ適用しない
   before_action :auth, only: :index
+  before_action :auth_digest, only: :req_head_ua
 
   def index
     sleep 3
@@ -167,10 +168,17 @@ class CtrlController < ApplicationController
       logger.debug('[Start] ' + Time.now.to_s)
     end
 
+    def auth_digest
+      members = { 'yyamada' => '47449ae3e102927e4fab12a5549ed5d7' } # passwd = 12345
+      authenticate_or_request_with_http_digest('railbook') do |name|
+        members[name]
+      end
+    end
+
     def auth
       # 認証に利用するユーザ名、パスワード
       name = 'yagisuke'
-      passwd = '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8' # passwd = password
+      passwd = '8cb2237d0679ca88db6464eac60da96345513964' # passwd = password
       # 基本認証を実行（入力されたユーザ名・パスワードをname・passwdと比較）
       authenticate_or_request_with_http_basic('Railbook') do |n, p|
         n == name && Digest::SHA1.hexdigest(p) == passwd
