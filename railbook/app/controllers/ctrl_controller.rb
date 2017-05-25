@@ -165,7 +165,7 @@ class CtrlController < ApplicationController
   private
     # 開始時刻をログに記録
     def start_logger
-      logger.debug('[Start] ' + Time.now.to_s)
+      logger.debug('[START] ' + Time.now.to_s)
     end
 
     def auth_digest
@@ -187,6 +187,6 @@ class CtrlController < ApplicationController
 
     # 終了時刻をログに記録
     def end_logger
-      logger.debug('[Finish] ' + Time.now.to_s)
+      logger.debug('[ END ] ' + Time.now.to_s)
     end
 end
