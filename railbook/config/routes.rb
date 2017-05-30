@@ -147,4 +147,6 @@ Rails.application.routes.draw do
   post 'ctrl/session_rec'
   get 'ctrl/session_delete'
   get 'ctrl/session_all_delete'
+  get 'login/index'
+  post 'login/auth'
 end
