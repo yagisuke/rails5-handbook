@@ -24,7 +24,7 @@ class HelloController < ApplicationController
   end
 
   private
-    def check logined
+    def check_logined
       # セッション情報:usr (id値)が存在するか
       if session[:usr] then
         # 存在する場合はuserテーブルを検索し、ユーザ情報を取得
