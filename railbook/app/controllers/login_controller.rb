@@ -16,4 +16,9 @@ class LoginController < ApplicationController
       render 'index'
     end
   end
+
+  def logout
+    reset_session
+    redirect to '/'
+  end
 end
