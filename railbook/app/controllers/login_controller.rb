@@ -8,7 +8,7 @@ class LoginController < ApplicationController
       # 成功した場合はid値をセッションに設定し、元々の要求ページにリダイレクト
       reset_session
       session[:usr] = usr.id
-      redirect_to params[:refer]
+      redirect_to params[:referer]
     else
       # 失敗した場合はfalse[:referer]を再セットし、ログインページを再描画
       flash.now[:referer] = params[:referer]
@@ -19,6 +19,6 @@ class LoginController < ApplicationController
 
   def logout
     reset_session
-    redirect to '/'
+    redirect_to '/'
   end
 end
