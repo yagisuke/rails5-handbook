@@ -1,4 +1,6 @@
 class LoginController < ApplicationController
+  skip_before_action :check_logined
+
   # [ログイン]ボタンのクリック時に実行されるアクション
   def auth
     # 入力値にしたがってユーザ情報を取得
