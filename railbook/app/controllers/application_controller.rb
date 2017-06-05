@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound, with: :id_invalid
   # 認証機能
   before_action :check_logined
+  before_action :detect_device
 
   def check_logined
     # セッション情報:usr (id値)が存在するか
@@ -27,5 +28,14 @@ class ApplicationController < ActionController::Base
     def id_invalid(e)
       # ステータス404（Not Found）で指定ビューを描画
       render 'shared/record_not_found', status: 404
+    end
+
+    def detect_device
+      case params[:type]
+      when 'mobile'
+        request.variant = :mobile
+      when 'tablet'
+        request.variant = :tablet
+      end
     end
 end
