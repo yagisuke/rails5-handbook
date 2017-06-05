@@ -1,5 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  # RecordNotFound例外を処理するのはid_validメソッド
+  rescue_from ActiveRecord::RecordNotFound, with: :id_invalid
+  # 認証機能
   before_action :check_logined
 
   def check_logined
@@ -19,4 +22,10 @@ class ApplicationController < ActionController::Base
       redirect_to controller: :login, action: :index
     end
   end
+
+  private
+    def id_invalid(e)
+      # ステータス404（Not Found）で指定ビューを描画
+      render 'shared/record_not_found', status: 404
+    end
 end
