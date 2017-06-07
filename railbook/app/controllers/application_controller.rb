@@ -4,7 +4,10 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound, with: :id_invalid
   # 認証機能
   before_action :check_logined
+  # デバイス判定
   before_action :detect_device
+  # 共通flash key
+  add_flash_types :info
 
   def check_logined
     # セッション情報:usr (id値)が存在するか
