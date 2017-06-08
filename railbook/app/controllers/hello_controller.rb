@@ -1,4 +1,5 @@
 class HelloController < ApplicationController
+  include FormAuth
   around_action :around_logger
   skip_before_action :check_logined, only: :list
 

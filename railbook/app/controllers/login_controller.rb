@@ -1,4 +1,5 @@
 class LoginController < ApplicationController
+  include FormAuth
   skip_before_action :check_logined
 
   # [ログイン]ボタンのクリック時に実行されるアクション
