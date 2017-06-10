@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :reviews
   resources :authors
   resources :users
-  resources :books
+  resources :books, constraints: { id: /[0-9]{1,2}/ }
 
   # 第2章
   get 'hello', to: 'hello#index'
