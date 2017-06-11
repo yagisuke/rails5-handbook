@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
   resources :members
   resources :fan_comments
-  resources :reviews
   resources :authors
   resources :users
-  resources :books, constraints: { id: /[0-9]{1,2}/ }
+
+  constraints(id: /[0-9]{1,2}/) do
+    resources :books
+    resources :reviews
+  end
 
   # 第2章
   get 'hello', to: 'hello#index'
