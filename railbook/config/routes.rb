@@ -1,5 +1,7 @@
+require 'time_constraint'
+
 Rails.application.routes.draw do
-  resources :members
+  resources :members, constraints: TimeConstraint.new
   resources :fan_comments
   resources :authors
   resources :users
