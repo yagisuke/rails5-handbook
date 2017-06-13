@@ -3,7 +3,7 @@ require 'time_constraint'
 Rails.application.routes.draw do
   resources :members, constraints: TimeConstraint.new
   resources :fan_comments
-  resources :authors
+  resources :authors, format: false
   resources :users
 
   constraints(id: /[0-9]{1,2}/) do
