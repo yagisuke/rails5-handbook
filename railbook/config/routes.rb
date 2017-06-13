@@ -1,10 +1,11 @@
 require 'time_constraint'
 
 Rails.application.routes.draw do
-  resources :members, constraints: TimeConstraint.new
+  # resources :members
   resources :fan_comments
   resources :authors, format: false
-  resources :users
+  resources :users, constraints: TimeConstraint.new
+  resources :members, controller: :users
 
   constraints(id: /[0-9]{1,2}/) do
     resources :books
