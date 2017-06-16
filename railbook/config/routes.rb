@@ -12,6 +12,10 @@ Rails.application.routes.draw do
     resources :reviews
   end
 
+  namespace :admin do
+    resources :books
+  end
+
   # 第2章
   get 'hello', to: 'hello#index'
   get 'hoge/index', to: 'hello#index'
