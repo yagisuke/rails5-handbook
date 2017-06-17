@@ -2,18 +2,24 @@ require 'time_constraint'
 
 Rails.application.routes.draw do
   # resources :members
-  resources :fan_comments
+  resources :fan_comments, constraints: TimeConstraint.new
   resources :authors, format: false
-  resources :users, constraints: TimeConstraint.new
-  resources :members, controller: :users
+  resources :members
+  resources :books
 
-  resources :books, constraints: { id: /[0-9]{1,2}/ } do
-    resources :reviews, shallow: true
+  concern :addtional do
+    get :unapproval, on: :collection
+    get :draft, on: :member
   end
+
+  resources :users, concerns: :addtional
+  resources :reviews, concerns: :addtional
 
   scope :admin do
     resources :books
   end
+
+  match '/details(/:id)' => 'hello#index', via: [ :get, :post ]
 
   # 第2章
   get 'hello', to: 'hello#index'
