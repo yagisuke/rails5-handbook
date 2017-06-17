@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :members, controller: :users
 
   resources :books, constraints: { id: /[0-9]{1,2}/ } do
-    resources :reviews
+    resources :reviews, shallow: true
   end
 
   scope :admin do
