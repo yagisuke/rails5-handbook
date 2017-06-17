@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     resources :reviews
   end
 
-  namespace :admin do
+  scope :admin do
     resources :books
   end
 
