@@ -7,8 +7,7 @@ Rails.application.routes.draw do
   resources :users, constraints: TimeConstraint.new
   resources :members, controller: :users
 
-  constraints(id: /[0-9]{1,2}/) do
-    resources :books
+  resources :books, constraints: { id: /[0-9]{1,2}/ } do
     resources :reviews
   end
 
