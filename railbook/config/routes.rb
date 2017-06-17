@@ -166,4 +166,5 @@ Rails.application.routes.draw do
   post 'login/auth'
   get 'login/logout'
   get 'ctrl/device'
+  root to: 'books#index'
 end
