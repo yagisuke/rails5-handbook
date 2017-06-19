@@ -10,5 +10,6 @@ class HelloControllerTest < ActionDispatch::IntegrationTest
 
   test "routing check" do
     assert_generates('hello/list', { controller: 'hello', action: 'list' })
+    assert_recognizes({ controller: 'hello', action: 'list' }, 'hello/list')
   end
 end
