@@ -7,4 +7,8 @@ class HelloControllerTest < ActionDispatch::IntegrationTest
     assert_response :success, 'list action failed.'
     assert_template 'hello/list'
   end
+
+  test "routing check" do
+    assert_generates('hello/list', { controller: 'hello', action: 'list' })
+  end
 end
